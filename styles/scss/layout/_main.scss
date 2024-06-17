@@ -1,0 +1,137 @@
+// Variables
+$font-stack: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$primary-color: #333;
+$header-font-size: 3rem;
+$subheader-font-size: 1.5rem;
+$text-color: #666;
+$link-color: #0070f3;
+
+// Mixins
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Global styles
+body {
+  font-family: $font-stack;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Header styles
+header {
+  text-align: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+
+  h1 {
+    font-size: $header-font-size;
+    margin: 0;
+    color: $primary-color;
+  }
+
+  p {
+    font-size: $subheader-font-size;
+    margin: 0.5rem 0 0;
+  }
+
+  .github-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: block;
+  }
+}
+
+// Main content styles
+main {
+  @include center-content;
+  flex-direction: column;
+  padding: 2rem 1rem;
+
+  .blog-image {
+    width: 80%;
+    margin: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  }
+}
+/// Content-1
+.content-1 {
+  display: flex;
+  height: 100px;
+  width: 90%;
+  margin: 5rem;
+}
+
+.info {
+  width: 50%;
+
+  h3 {
+    color: rgb(41, 40, 48);
+    font-family: Hind Siliguri;
+    font-size: 33px;
+    line-height: 100%;
+    letter-spacing: 0%;
+  }
+}
+
+.picture {
+  width: 50%;
+  height: 540px;
+  justify-content: center;
+
+  img {
+    width: 60%;
+    margin: 5rem;
+  }
+}
+/////////////
+.title {
+  text-align: left;
+  margin-left: 4rem;
+  color: #333;
+}
+
+.stories {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.story {
+  width: 48%;
+  margin: 3rem ;
+
+  img {
+      width: 100%;
+      height: auto;
+  }
+
+  h2 {
+      color: #0070f3;
+  }
+
+  .date {
+      color: #666;
+  }
+
+  .content {
+      line-height: 1.6;
+  }
+}
